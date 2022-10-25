@@ -11,7 +11,6 @@ class SettingBase(TestCase):
 class TestWelcomePage(SettingBase):
     def testMainPage(self):
         response = self.client.get('/')
-        print(response.data)
         self.assertEqual(response.data,b"Hello, Cloud Run!")
 
 
